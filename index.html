@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Nutrição &amp; Bem-Estar | Alana Freitas</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-surface-variant": "#42493e",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-primary-fixed": "#002201",
+                        "on-background": "#1a1c1c",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#0d503f",
+                        "on-secondary-fixed": "#002118",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "error-container": "#ffdad6",
+                        "outline": "#72796e",
+                        "background": "#f9f9f9",
+                        "on-secondary-container": "#316d5b",
+                        "surface-container-low": "#f3f3f3",
+                        "secondary": "#2c6956",
+                        "primary-container": "#2d5a27",
+                        "outline-variant": "#c2c9bb",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#e2e2e2",
+                        "secondary-container": "#aeedd5",
+                        "on-primary-fixed-variant": "#23501e",
+                        "on-tertiary-fixed": "#1b1b1b",
+                        "secondary-fixed-dim": "#96d3bd",
+                        "inverse-primary": "#a1d494",
+                        "surface": "#f9f9f9",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "on-primary-container": "#9dd090",
+                        "surface-bright": "#f9f9f9",
+                        "on-secondary": "#ffffff",
+                        "surface-dim": "#dadada",
+                        "secondary-fixed": "#b1efd8",
+                        "primary-fixed-dim": "#a1d494",
+                        "primary": "#154212",
+                        "on-surface": "#1a1c1c",
+                        "inverse-surface": "#2f3131",
+                        "tertiary-container": "#505050",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#e8e8e8",
+                        "tertiary": "#393939",
+                        "surface-variant": "#e2e2e2",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-tint": "#3b6934",
+                        "on-tertiary-container": "#c3c3c3",
+                        "surface-container": "#eeeeee",
+                        "primary-fixed": "#bcf0ae"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif; overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Noto Serif', serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-secondary-container selection:text-on-secondary-container">
+    <!-- Top Navigation Bar -->
+    <nav
+        class="fixed top-0 w-full h-20 mt-3 rounded-3xl z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md flex justify-between items-center px-8 max-w-7xl mx-auto left-0 right-0 shadow-sm shadow-emerald-900/5">
+        <div class="text-2xl font-serif italic text-emerald-950 dark:text-emerald-50">Alana Freitas Da Silva
+        </div>
+        <div class="hidden md:flex gap-8 items-center">
+            <a class="nav-link font-notoserif text-sm tracking-wide uppercase font-bold relative after:content-[''] after:absolute after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-emerald-800 after:rounded-full text-emerald-900"
+                href="#inicio">Home</a>
+            <a class="nav-link font-notoserif text-sm tracking-wide uppercase font-medium text-stone-600 hover:text-emerald-800 transition-colors"
+                href="#sobre-mim">Sobre</a>
+            <a class="nav-link font-notoserif text-sm tracking-wide uppercase font-medium text-stone-600 hover:text-emerald-800 transition-colors"
+                href="#servicos">Serviços</a>
+            <a class="nav-link font-notoserif text-sm tracking-wide uppercase font-medium text-stone-600 hover:text-emerald-800 transition-colors"
+                href="#contato">Contato</a>
+            <a class="ml-4 px-6 py-2 bg-primary text-on-primary rounded-xl font-medium tracking-tight hover:opacity-90 transition-all active:scale-95"
+                href="https://wa.me/558586004670?text=Olá,%20vim%20da%20landing%20page!%20Quero%20marcar%20uma%20consulta!" target="_blank">Consulta</a>
+        </div>
+        <div class="relative md:hidden">
+            <button id="menu-btn">
+                <span class="material-symbols-outlined text-primary text-3xl">menu</span>
+            </button>
+            <!-- Dropdown -->
+            <div id="mobile-menu"
+                class="absolute -right-6 w-20 bg-white shadow-lg rounded-xl p-4 flex flex-col gap-4 hidden z-50">
+
+                <a href="#inicio" class="nav-link text-sm">Home</a>
+                <a href="#sobre-mim" class="nav-link text-sm">Sobre</a>
+                <a href="#servicos" class="nav-link text-sm">Serviços</a>
+                <a href="#contato" class="nav-link text-sm">Contato</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <header class="relative md:bottom-20 pt-32 md:pt-48 px-6 overflow-hidden pb-12 md:pb-16" id="inicio">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-12 items-center gap-10">
+            <div class="md:col-span-7 z-10">
+                <span class="inline-block label-md text-primary font-bold tracking-[0.15em] mb-4 uppercase"
+                data-aos="fade-up" data-aos-delay="100">Bem-vindo à Nutrição &amp; Bem-Estar</span>
+                <h1 class="text-5xl md:text-7xl font-headline leading-[1.1] text-on-background mb-8" data-aos="fade-right" data-aos-delay="200">
+                    Precisão na <span class="text-primary italic" >Nutrição</span> para uma vida vibrante.
+                </h1>
+                <p class="text-lg md:text-xl text-on-surface-variant font-body max-w-xl leading-relaxed mb-10" data-aos="fade-up" data-aos-delay="300">
+                    Ciência e equilíbrio para transformar sua relação com a comida. Desenvolvendo uma abordagem
+                    editorial para o seu bem-estar.
+                </p>
+                <div class="flex flex-wrap gap-4" data-aos="fade-up" data-aos-delay="200">
+                    <a href="https://wa.me/558586004670?text=Olá,%20vim%20da%20landing%20page!%20Quero%20marcar%20uma%20consulta!" target="_blank"
+                        class="px-8 py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary rounded-xl font-semibold text-lg shadow-xl shadow-primary/10 hover:shadow-primary/20 transition-all"
+                        >Começar Jornada</a>
+                    <a href="#servicos"
+                        class="px-8 py-4 bg-surface-container-highest text-primary rounded-xl font-semibold text-lg hover:bg-surface-container-high transition-all"
+                        >Ver Serviços</a>
+                </div>
+            </div>
+            <div class="md:col-span-5 relative" data-aos="fade-left" data-aos-duration="1000">
+                <div
+                    class="aspect-[4/5] rounded-full overflow-hidden shadow-2xl z-10 relative border-[12px] border-white">
+                    <img class="w-full h-full object-cover"
+                        data-alt="High quality vibrant healthy organic ingredients arrangement"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdP0RVb18QutMnK9o6gG3lbDYe2_ty84WFcg1hREb_f6n4pUEMR3AH54Cgi7QvJvfjndNTqW5mL4Sg4JkKaBMyR69ZsGpV20bcuxLCcWIropH7ehjSKneB60-bDAk9EBEZGJ4ZfbR5uFrIDP_EAT0meBfYnAO_qS0FUHSEA7XpSh5vU72vMvQGRwqoL4VXgzVkrSLaMk75c4Y2JQ9S1K6i6aJzGFq92y_jgNFE6NUqsB707MxACge66oN__ZTOnr3v5GnlKvH59JhH"
+                         />
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- About Me Section -->
+    <section class="bg-surface pt-12 md:pt-16 pb-24 md:pb-32" id="sobre-mim">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-16 items-center">
+                <div class="w-full md:w-2/5 relative" data-aos="fade-up">
+                    <div class="absolute inset-0 bg-surface-container-low translate-x-6 translate-y-6 rounded-xl -z-10">
+                    </div>
+                    <img class="w-full aspect-[3/4] object-cover rounded-xl shadow-lg"
+                        data-alt="Professional portrait of a female nutrition student"
+                        src="./lana.webp"
+                         />
+                </div>
+                <div class="w-full md:w-3/5" data-aos="fade-up" data-aos-delay="200">
+                    <span class="label-md text-primary font-bold tracking-[0.1em] uppercase mb-4 block" >A
+                        Missão</span>
+                    <h2 class="text-4xl md:text-5xl font-headline mb-8 text-on-background" >Ciência com <span
+                            class="italic font-normal" >Empatia</span></h2>
+                    <div class="space-y-6 text-lg text-on-surface-variant font-body leading-relaxed">
+                        <p class="" >
+                            Sou estudante em Nutrição e apaixonada pela intersecção entre a ciência dos alimentos e o
+                            comportamento humano. Acredito que a alimentação não deve ser uma fonte de estresse, mas um
+                            pilar de vitalidade.
+                        </p>
+                        <p class="" >
+                            Meus estudos focam em nutrição clínica funcional e comportamento alimentar, buscando sempre
+                            as evidências mais recentes para traduzi-las em práticas simplificadas para o seu dia a dia.
+                        </p>
+                        <p class="" >
+                            Na <strong>Nutrição &amp; Bem-Estar</strong>, meu objetivo é oferecer um olhar editorial e
+                            preciso sobre sua saúde, tratando cada plano como um projeto único e personalizado.
+                        </p>
+                    </div>
+                    <div class="mt-10 flex gap-12">
+                        <div data-aos="zoom-in" data-aos-delay="400">
+                            <span class="block text-3xl font-headline text-primary" >2+</span>
+                            <span class="text-sm font-label uppercase tracking-widest text-on-surface-variant"
+                                >Anos de Estudo</span>
+                        </div>
+                        <div data-aos="zoom-in" data-aos-delay="500">
+                            <span class="block text-3xl font-headline text-primary" >100%</span>
+                            <span class="text-sm font-label uppercase tracking-widest text-on-surface-variant"
+                                >Dedicação e foco</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Bento Grid -->
+    <section class="py-24 bg-surface-container-low" id="servicos">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="label-md text-primary font-bold tracking-[0.1em] uppercase mb-4 block" >Nossos
+                    Serviços</span>
+                <h2 class="text-4xl md:text-5xl font-headline text-on-background" >Cuidado Especializado</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div data-aos="fade-up" data-aos-delay="100"
+                    class="bg-surface-container-lowest p-10 rounded-xl group hover:shadow-2xl transition-all duration-500 relative overflow-hidden">
+                    <div
+                        class="mb-8 w-14 h-14 bg-secondary-container rounded-full flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl" >clinical_notes</span>
+                    </div>
+                    <h3 class="text-2xl font-headline mb-4" >Consulta Dietética</h3>
+                    <p class="text-on-surface-variant font-body leading-relaxed mb-8" >
+                        Análise profunda do seu histórico, exames e objetivos para um diagnóstico nutricional preciso.
+                    </p>
+                    <ul class="space-y-3 mb-10 text-on-surface-variant font-body text-sm">
+                        <li class="flex items-center gap-2" ><span
+                                class="material-symbols-outlined text-primary text-lg" >check_circle</span>
+                            Antropometria completa</li>
+                        <li class="flex items-center gap-2" ><span
+                                class="material-symbols-outlined text-primary text-lg" >check_circle</span>
+                            Rastreamento metabólico</li>
+                        <li class="flex items-center gap-2" ><span
+                                class="material-symbols-outlined text-primary text-lg" >check_circle</span>
+                            Suporte contínuo</li>
+                    </ul>
+                    <a class="text-primary font-bold inline-flex items-center gap-2 group/link" href="https://wa.me/558586004670?text=Olá,%20vim%20da%20landing%20page!%20Quero%20marcar%20uma%20consulta!" target="_blank">
+                        Saber mais
+                        <span class="material-symbols-outlined group-hover/link:translate-x-1 transition-transform"
+                            >arrow_forward</span>
+                    </a>
+                </div>
+                <!-- Service Card 2 (Large) -->
+                <div data-aos="fade-up" data-aos-delay="200" class="bg-primary text-on-primary p-10 rounded-xl md:col-span-1 group hover:shadow-2xl transition-all duration-500 relative overflow-hidden">
+                    <div
+                        class="mb-8 w-14 h-14 bg-primary-container rounded-full flex items-center justify-center text-on-primary-container group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl" >restaurant_menu</span>
+                    </div>
+                    <h3 class="text-2xl font-headline mb-4" >Planos Alimentares</h3>
+                    <p class="text-on-primary-container font-body leading-relaxed mb-8" >
+                        Estratégias personalizadas que respeitam sua rotina, preferências e cultura alimentar, sem
+                        restrições desnecessárias.
+                    </p>
+                    <div class="p-6 bg-white/10 rounded-lg backdrop-blur-sm border border-white/10">
+                        <span class="text-xs font-label uppercase tracking-widest opacity-70 block mb-2"
+                            >Diferencial</span>
+                        <p class="text-sm italic" >Receitas exclusivas e guias de compras inclusos em todos os
+                            planos.</p>
+                    </div>
+                    <div class="absolute bottom-0 right-0 opacity-10 translate-x-1/4 translate-y-1/4">
+                        <span class="material-symbols-outlined text-[12rem]"
+                            style='font-variation-settings: "FILL" 1;'>spa</span>
+                    </div>
+                </div>
+                <!-- Service Card 3 -->
+                <div data-aos="fade-up" data-aos-delay="300"
+                    class="bg-surface-container-lowest p-10 rounded-xl group hover:shadow-2xl transition-all duration-500">
+                    <div
+                        class="mb-8 w-14 h-14 bg-secondary-container rounded-full flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl" >monitoring</span>
+                    </div>
+                    <h3 class="text-2xl font-headline mb-4" >Performance e Bem-estar</h3>
+                    <p class="text-on-surface-variant font-body leading-relaxed mb-8" >
+                        Foco em energia diária, melhora da qualidade do sono e otimização de rendimento para praticantes
+                        de atividade física.
+                    </p>
+                    <ul class="space-y-3 mb-10 text-on-surface-variant font-body text-sm">
+                        <li class="flex items-center gap-2" ><span
+                                class="material-symbols-outlined text-primary text-lg" >check_circle</span>
+                            Protocolos de suplementação</li>
+                        <li class="flex items-center gap-2" ><span
+                                class="material-symbols-outlined text-primary text-lg" >check_circle</span>
+                            Ajuste pré e pós treino</li>
+                        <li class="flex items-center gap-2" ><span
+                                class="material-symbols-outlined text-primary text-lg" >check_circle</span>
+                            Nutrição para foco mental</li>
+                    </ul>
+                    <a class="text-primary font-bold inline-flex items-center gap-2 group/link" href="https://wa.me/558586004670?text=Olá,%20vim%20da%20landing%20page!%20Quero%20marcar%20uma%20consulta!" target="_blank">
+                        Saber mais
+                        <span class="material-symbols-outlined group-hover/link:translate-x-1 transition-transform"
+                            >arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Content Feature - Newsletter/Journal Style -->
+    <section class="py-24 bg-surface" id="contato">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right">
+                <h2 class="text-4xl font-headline mb-6" >Vamos colaborar?</h2>
+                <p class="text-lg text-on-surface-variant mb-8 leading-relaxed" >Estou em busca de novas
+                    oportunidades e parcerias. Se você precisa de uma estagiária dedicada ou quer conhecer mais sobre o meu
+                    trabalho e estudos na área de nutrição, entre em contato.</p>
+                <div class="flex flex-col sm:flex-row gap-4 mt-8">
+                    <a class="px-8 py-4 bg-primary text-on-primary rounded-xl font-bold text-center hover:opacity-90 transition-all shadow-lg shadow-primary/10"
+                        href="https://wa.me/558586004670?text=Olá,%20vim%20da%20landing%20page!%20Quero%20marcar%20uma%20consulta!" target="_blank">
+                        Precisa de estagiária?
+                    </a>
+                    <a class="px-8 py-4 border-2 border-primary text-primary rounded-xl font-bold text-center hover:bg-primary hover:text-on-primary transition-all"
+                        href="https://wa.me/558586004670?text=Olá,%20vim%20da%20landing%20page!%20Quero%20marcar%20uma%20consulta!" target="_blank">
+                        Quer conhecer meu trabalho?
+                    </a>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4" data-aos="fade-left">
+                <div class="space-y-4 pt-12">
+                    <div class="h-48 rounded-xl bg-stone-200 overflow-hidden shadow-sm" data-aos="zoom-in" data-aos-delay="100">
+                        <img class="w-full h-full object-cover" data-alt="Healthy salad bowl top view"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQmcNSx8pG9-CBAvvjQnpTMhglZa_MupqjkE8PUKe7qUDw3Xxt-VC2WKnUQd644TUR3IT23JSfotYyYuKHgrSxEhdsTg_OU0gQO-sg82jg4kJpR4H1xikup54Oo9p-daBNJWzPkFetRXY4rrqg9HgPFUyqe5CcdWWQb7EainBVtyv74YUPUr9aqdX0YBQAwaUnguZmHiW0fVWbLtiDFI6wYvUuueXBKASGnOSVtAwPq-YR1x793G7pDQDzJezo1bPTNh0CodiurOPF"
+                             />
+                    </div>
+                    <div class="h-64 rounded-xl bg-stone-300 overflow-hidden shadow-sm" data-aos="zoom-in" data-aos-delay="200">
+                        <img class="w-full h-full object-cover" data-alt="Scientific nutrition research visualization"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdqvMTDEZ-3wbYxuPI9EYpov-RJ5pzvyJH8PY06MWyGm0DWqn40qxj9sSvHZl8VqoccNSbbVP4TvvaTrKVpBoHeI861p6ytw-t5V2yF_R7PY8QXquDgnr3pFJTYNZtm1v0xl2K6ySq5a0OTS_0_sPT-3CiUZCDV9qtbZi20HHRBnVaQmF_O93Uxm43QZ2rWp6LkAIfkEwiuSzzQ9Z5U0z1uQs6H5IfXaD7n_n2r7Hg4rmYf5P3UZElLSbuIMsJ3nUZ_nWl5Xz3nFDq"
+                             />
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="h-64 rounded-xl bg-stone-300 overflow-hidden shadow-sm" data-aos="zoom-in" data-aos-delay="300">
+                        <img class="w-full h-full object-cover" data-alt="Fresh vegetables preparation on a kitchen counter"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlq5e4rOkBFkcFKeh5nfrVxsfFqQi7qx_64aR-yIdqU_R7EL-YC3sMC5HIIPg63eNSmQhb1LJg8UA8m-0SRLAN9ghmoYg-8hO_Cu_KcaPZ6xtFJ4P34l7GR1WnfMN93wvouKS7038148o0e3aNwTfiCVADTeXHFaXeaCmvn34sqPAEnKxCY8QSjvDTZCXPY_3m3OP-psriIAw7p61WqJSuUZD5AyXm1DBz4FKOP47TR8d_JMImEsGDJOwfVSrgt3GwxUf1iI38tm4Q"
+                             />
+                    </div>
+                    <div class="h-48 rounded-xl bg-stone-200 overflow-hidden shadow-sm" data-aos="zoom-in" data-aos-delay="400">
+                        <img class="w-full h-full object-cover" data-alt="Macro of green vegetable leaves"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuChKzrZzf8hWJZFncCo9qEqV42nK4A7gjNFwyPBQ5qOeCJUHw0fCjae6SRbCA54QzTTYpzkyztfbPjd8Y35eTD4xqPXDr_XqT9yf83jEx0CqBgbX5XQuvR6xK1RsDsIPRSUJOtUGQtjOXRg-xWc6QR1eZpEpcG9aUWJ04vad9apa4gCq5cWVz2nhrvS78Q01pX36CsjuM6eEnjzwValnX9n4i-GNvJPChAGOG9BFMRpFt2_rWvZh9Zy-PQ4K35bPhHlM5SJ34c0b4gH"
+                             />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="w-full py-12 border-t border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-950">
+        <div class="flex flex-col md:flex-row justify-between items-center px-12 max-w-7xl mx-auto gap-6" data-aos="fade-up">
+            <div class="flex flex-col items-center md:items-start">
+                <div class="font-notoserif font-bold text-emerald-900 text-xl mb-2" >Alana Freitas Da Silva
+                </div>
+                <p class="font-manrope text-xs tracking-tight text-stone-500" >© <span id="years"></span> Desenvolvido por <a class="text-emerald-900" href="https://github.com/z1Apollo" target="_blank">Apollo</a> </p>
+            </div>
+            <div class="flex gap-8">
+                <a class="text-stone-500 hover:text-emerald-700 font-manrope text-xs tracking-tight uppercase hover:opacity-80 transition-all focus:ring-2 focus:ring-emerald-500"
+                    href="#" >Instagram</a>
+                <a class="text-stone-500 hover:text-emerald-700 font-manrope text-xs tracking-tight uppercase hover:opacity-80 transition-all focus:ring-2 focus:ring-emerald-500"
+                    href="#" >LinkedIn</a>
+            </div>
+            <div class="flex gap-4">
+                <a href="mailto:lana28.fs@gmail.com"
+                    class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all cursor-pointer">
+                    <span class="material-symbols-outlined text-lg" >mail</span>
+                </a>
+                <a href="tel:+558586004670"
+                    class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all cursor-pointer">
+                    <span class="material-symbols-outlined text-lg" >call</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-quad',
+            once: true,
+            offset: 0,
+            delay: 50,
+        });
+
+        const years = document.querySelector("#years").textContent = new Date().getFullYear()
+        const links = document.querySelectorAll('.nav-link')
+        const menuBtn = document.getElementById("menu-btn")
+        const mobileMenu = document.getElementById("mobile-menu")
+        const linksMobile = mobileMenu.querySelectorAll("a")
+
+        linksMobile.forEach(link => {
+            link.addEventListener("click", () => {
+                mobileMenu.classList.add("hidden")
+            })
+        })
+
+        menuBtn.addEventListener("click", (e) => {
+            e.stopPropagation()
+            mobileMenu.classList.toggle("hidden")
+        });
+
+        document.addEventListener("click", () => {
+            mobileMenu.classList.add("hidden")
+        });
+
+        mobileMenu.addEventListener("click", (e) => {
+            e.stopPropagation()
+        });
+    
+        const activeClasses = [
+            "font-bold",
+            "relative",
+            "after:content-['']",
+            "after:absolute",
+            "after:-bottom-1",
+            "after:left-1/2",
+            "after:-translate-x-1/2",
+            "after:w-1",
+            "after:h-1",
+            "after:bg-emerald-800",
+            "after:rounded-full",
+            "text-emerald-900"
+        ];
+
+        function setActiveLink(id) {
+            links.forEach(link => {
+                const href = link.getAttribute('href');
+
+                link.classList.remove(...activeClasses);
+                link.classList.add("text-stone-600");
+
+                if (href === `#${id}`) {
+                    link.classList.add(...activeClasses);
+                    link.classList.remove("text-stone-600");
+                }
+            });
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setActiveLink(entry.target.id);
+                }
+            });
+        }, {
+            threshold: 0.6
+        });
+
+        ["inicio", "sobre-mim", "servicos", "contato"].forEach(id => {
+            const section = document.getElementById(id);
+            if (section) observer.observe(section);
+        });
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                const id = link.getAttribute('href').replace('#', '');
+                setActiveLink(id);
+            });
+        });
+    </script>
+</body>
+</html>
